@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{697901F0-4BAC-479F-890C-FE183AD91D81}</ProjectGuid>
+    <ProjectGuid>{BD0B970C-0A88-4003-AAC9-DA264B14F26A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GooseExpress</RootNamespace>
     <AssemblyName>GooseExpress</AssemblyName>
