@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GooseExpress
+namespace GooseExpress.Wind
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegWindow : Window
     {
-        public MainWindow()
+        public RegWindow()
         {
             InitializeComponent();
         }
