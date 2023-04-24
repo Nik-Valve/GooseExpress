@@ -6,7 +6,229 @@
         xmlns:local="clr-namespace:GooseExpress.Wind"
         mc:Ignorable="d"
         Title="RegWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        <Style x:Key="tbLogin1" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="200" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="tbPassword1" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="200" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="86.808"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Image/WhatsApp Image 2023-04-05 at 19.40.25.png" 
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Border 
+                    Height="250"
+                    Width="453" 
+            Background="#121313"
+                    OpacityMask="#7F121313" 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.ColumnSpan="2"
+            CornerRadius="20"
+            />
+        <Border CornerRadius="20,20,20,20"
+                Margin="0,10,0,0"
+                Height="100" 
+                Width="100"
+                Grid.Row="1"
+                HorizontalAlignment="Center">
+            <Border.Background >
+                <ImageBrush Stretch="Fill" 
+                            ImageSource="/Image/employees.png"/>
+            </Border.Background>
+        </Border>
+        <Separator Width="200"
+                   Height="5"
+                   VerticalAlignment="Bottom"
+                   Grid.Row="2"
+                   Margin="0,0,0,0"/>
+        <TextBox    x:Name="tbLogin" 
+                    Style="{StaticResource tbLogin1}"
+                   Margin="0,0,0,7"
+                   Grid.Row="2"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="White"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="LOGIN"
+                   Grid.Row="2"
+                   Foreground="#7CFFFFFF"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,5">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbLogin}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <!--__________________________________LOGIN________________________________________-->
+
+
+
+
+
+        <Separator Width="200"
+                   Height="5"
+                   VerticalAlignment="Top"
+                   Margin="0,35,0,0"
+                   Grid.Row="3"/>
+        <TextBox    x:Name="tbPassword" 
+                    Style="{StaticResource tbPassword1}"
+                   Margin="0,13,0,0"
+                   Grid.Row="3"
+                    VerticalAlignment="Top"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="White"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="PASSWORD"
+                   Grid.Row="3"
+                   Foreground="#7CFFFFFF"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Margin="15,13,0,0">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbPassword}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <!--_________________________PASSWORD_________________________________________-->
+
+        <Button
+            Style="{StaticResource MyButtonStyle}"
+            Height="20"
+            Width="100"
+            Content="Войти" 
+            FontStyle="Italic" 
+            FontWeight="Bold"
+            Background="#8EAA99"
+            Grid.Row="4" BorderBrush="{x:Null}"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

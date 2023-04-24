@@ -95,5 +95,20 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\WhatsApp Image 2023-04-05 at 19.40.25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\image %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\image-_3_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataHelper\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
