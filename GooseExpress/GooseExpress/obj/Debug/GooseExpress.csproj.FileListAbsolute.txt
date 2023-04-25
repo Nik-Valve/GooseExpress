@@ -14,3 +14,5 @@ C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.csproj.CoreCompileInputs.cache
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.exe
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.pdb
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegistrationUsersWindow.g.cs
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegistrationUsersWindow.baml

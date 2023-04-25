@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace GooseExpress.Wind
 {
     /// <summary>
-    /// Логика взаимодействия для RegWindow.xaml
+    /// Логика взаимодействия для RegistrationUsersWindow.xaml
     /// </summary>
-    public partial class RegWindow : Window
+    public partial class RegistrationUsersWindow : Window
     {
-        public RegWindow()
+        public RegistrationUsersWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            RegistrationUsersWindow ruw = new RegistrationUsersWindow();
-            ruw.Show();
-            this.Close();
         }
     }
 }

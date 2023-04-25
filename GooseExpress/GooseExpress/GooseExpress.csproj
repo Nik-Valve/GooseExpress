@@ -59,6 +59,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Wind\RegistrationUsersWindow.xaml.cs">
+      <DependentUpon>RegistrationUsersWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wind\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Wind\RegistrationUsersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Wind\RegWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +116,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataHelper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\noname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
