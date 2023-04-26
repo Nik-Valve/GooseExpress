@@ -30,5 +30,10 @@ namespace GooseExpress.Wind
             ruw.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

@@ -30,6 +30,29 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="btnReturn" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="tbSeria" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
@@ -43,7 +66,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="200" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -64,6 +87,237 @@
             </Setter>
         </Style>
         <Style x:Key="tbNumber" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="180" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbCity" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="180" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbName" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="300" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbLastName" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="300" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbPatronymic" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="300" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbAddres" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="300" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbPhone" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="300" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbNameOrganization" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
             <Setter Property="Height" Value="35"/>
@@ -99,9 +353,12 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -120,82 +377,100 @@
             <ImageBrush ImageSource="/Image/noname.png" 
                         Stretch="UniformToFill"/>
         </Grid.Background>
-        <Image Width="30" Height="30" Source="/Image/2 (1).png"
-               Grid.Row="0"
-               HorizontalAlignment="Left"
+        <Button
+            x:Name="btnreturn"
+            HorizontalAlignment="Left"
                VerticalAlignment="Center"
-               Margin="10"/>
-        <Border Grid.Row="1" 
-                Grid.RowSpan="11"
+               Margin="10,0,0,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource btnReturn}"
+            IsMouseCapturedChanged="Button_IsMouseCapturedChanged"
+            Click="Button_Click">
+            <Image Width="30" Height="30" Source="/Image/2 (1).png"
+               />
+        </Button>
+        <Border 
+                Grid.Column="1"
+                Grid.RowSpan="13"
                 Width="500"
-                Height="300"
+                Height="400"
                 Background="#63786B"
                 CornerRadius="10"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="36,31,0,0"/>
         <Border Width="100"
                 Height="25"
                 Grid.Row="2"
+                Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="150,5,0,0"
+                HorizontalAlignment="Left"
+                Margin="310,0,0,5"
                 />
         <TextBox    x:Name="tbLogin" 
                     Style="{StaticResource tbSeria}"
-                    Margin="150,0,0,7"
+                    Margin="311,0,21,5"
                     Grid.Row="2"
-                    VerticalAlignment="Bottom"
+                    Grid.Column="1"
+HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
                     Width="100"
                     Height="20"
-                    CaretBrush="White"
+                    CaretBrush="Black"
                    />
-            <TextBlock IsHitTestVisible="False" 
+        <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
                    Text="4561"
                    Grid.Row="2"
-                   Foreground="#66FFFFFF"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Center"
-                   Margin="150,0,0,5">
-                <TextBlock.Style>
-                    <Style TargetType="{x:Type TextBlock}">
-                        <Setter Property="Visibility"
+                       Grid.Column="1"
+                   Foreground="#66000000"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Margin="346,0,0,5">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
                             Value="Collapsed"/>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding Text,ElementName=tbLogin}" Value="">
-                                <Setter Property="Visibility" 
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbLogin}" Value="">
+                            <Setter Property="Visibility" 
                                     Value="Visible"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </TextBlock.Style>
-            </TextBlock>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
 
 
         <Border Width="100"
                 Height="25"
                 Grid.Row="2"
+                Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="360,5,0,0"
+                VerticalAlignment="Center"
+                Margin="416,0,31,5" 
                 />
         <TextBox    x:Name="tbNumber" 
                     Style="{StaticResource tbNumber}"
-                    Margin="360,0,0,7"
+                    Margin="416,0,31,5"
                     Grid.Row="2"
-                    VerticalAlignment="Bottom"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
                     Width="100"
                     Height="20"
-                    CaretBrush="White"
+                    CaretBrush="Black"
                    />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
                    Text="211825"
                    Grid.Row="2"
-                   Foreground="#66FFFFFF"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Center"
-                   Margin="360,0,0,5">
+                   Grid.Column="1"
+                   Foreground="#66000000"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Margin="0,0,70,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -209,11 +484,625 @@
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label Content="Серия и номер паспорта"
+        <Label 
                Grid.Row="2"
-               Margin="200,0,0,0"
+               Grid.Column="1"
+                HorizontalAlignment="Left"
+            Margin="50,0,0,0"
                Height="25"
                VerticalAlignment="Center"
-               Foreground="White" FontFamily="Elephant" FontWeight="Bold" FontStyle="Italic"/>
+               Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            Content="Серия и номер паспорта"
+            FontStyle="Italic">
+        </Label>
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="157"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row2_______________-->
+
+
+        <Border Width="206"
+                Height="25"
+                Grid.Row="3"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="316,0,0,5"
+                HorizontalAlignment="Left"
+                Grid.ColumnSpan="3"
+                />
+        <TextBox    x:Name="tbCity" 
+                    Style="{StaticResource tbCity}"
+                    Margin="0,0,168,5"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    Width="200"
+                    Height="25"
+                    HorizontalAlignment="Right"
+                    CaretBrush="Black"
+                    FontSize="14" Grid.ColumnSpan="3"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="Петропавловск-Камчатский"
+                   Margin="0,0,40,5"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="200"
+                    Height="20"
+                    HorizontalAlignment="Right"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbCity}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="3"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="50"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock>Город</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="3"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="45"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+
+
+        <!--_______________Grid.Row3_______________-->
+        <Border Width="300"
+                Height="25"
+                Grid.Row="4"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left"
+                />
+        <TextBox    x:Name="tbLastName" 
+                    Style="{StaticResource tbLastName}"
+                   Width="300"
+                Height="25"
+                Grid.Row="4"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="Уланова"
+                   Margin="242,0,0,5"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="180"
+                    Height="20"
+                    HorizontalAlignment="Left"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbLastName}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="4"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="100"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock>Фамилия</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="4"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="70"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row4_______________-->
+        <Border Width="300"
+                Height="25"
+                Grid.Row="5"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                />
+        <TextBox    x:Name="tbName" 
+                    Style="{StaticResource tbName}"
+                    Width="300"
+                    Height="25"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    Margin="222,0,0,5"
+                    HorizontalAlignment="Left"
+                   />
+
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="Алиса"
+                   Margin="242,0,0,5"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="180"
+                    Height="20"
+                    HorizontalAlignment="Left"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbName}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="5"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="100"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock>Имя</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="5"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="35"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row5_______________-->
+        <Border Width="300"
+                Height="25"
+                Grid.Row="6"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                />
+        <TextBox    x:Name="tbPatronymic" 
+                    Style="{StaticResource tbPatronymic}"
+                                       Width="300"
+                Height="25"
+                Grid.Row="6"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left"/>
+
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="Александровна"
+                   Margin="242,0,0,5"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="180"
+                    Height="20"
+                    HorizontalAlignment="Left"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbPatronymic}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="6"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="100"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock >Отчество</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="6"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="75"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row6_______________-->
+        <Border Width="300"
+                Height="25"
+                Grid.Row="7"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                />
+        <TextBox    x:Name="tbAddress" 
+                    Style="{StaticResource tbAddres}"
+                                      Width="300"
+                Height="25"
+                Grid.Row="7"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left"/>
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="Судостроительная улица, 12"
+                   Margin="242,0,0,0"
+                   Grid.Row="7"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="180"
+                    Height="20"
+                    HorizontalAlignment="Left"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbAddress}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="7"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+               Width="100"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               Foreground="Black" 
+               FontFamily="Elephant" 
+               FontWeight="Bold" 
+               FontStyle="Italic">
+            <TextBlock Width="35">Адрес</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="7"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="45"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row7_______________-->
+        <Border Width="300"
+                Height="25"
+                Grid.Row="8"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left" />
+        <TextBox    x:Name="tbPhone" 
+                    Style="{StaticResource tbPhone}"
+                                       Width="300"
+                Height="25"
+                Grid.Row="8"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="222,0,0,5"
+                HorizontalAlignment="Left"/>
+
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="8927451932"
+                   Margin="242,0,0,5"
+                   Grid.Row="8"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="180"
+                    Height="20"
+                    HorizontalAlignment="Left"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbPhone}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Label 
+               Grid.Row="8"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+               Width="100"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               Foreground="Black" 
+               FontFamily="Elephant" 
+               FontWeight="Bold" 
+               FontStyle="Italic">
+            <TextBlock>Телефон</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="8"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="63"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row8_______________-->
+        <Border
+            x:Name="bOrganization"
+            Width="206"
+                Height="25"
+                Grid.Row="10"
+                Grid.Column="1"
+                BorderThickness="2"
+                BorderBrush="White"
+                Margin="316,0,0,5"
+                HorizontalAlignment="Left"
+                Grid.ColumnSpan="3"
+                />
+        <TextBox    x:Name="tbNameOrganization" 
+                    Style="{StaticResource tbNameOrganization}"
+                    Margin="0,0,160,5"
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    Width="200"
+                    Height="25"
+                    HorizontalAlignment="Right"
+                    CaretBrush="Black"
+                    FontSize="14" Grid.ColumnSpan="3"
+                   >
+            <TextBox.ToolTip>
+                <ToolTip>
+                    АО Комета
+                </ToolTip>
+            </TextBox.ToolTip>
+        </TextBox>
+        <!--<TextBlock 
+            x:Name="tblOrganization"
+                   IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="АО Комета"
+                   Margin="0,3,40,3"
+                   Grid.Row="10"
+                   Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Width="200"
+                    Height="20"
+                    HorizontalAlignment="Right"
+                   Foreground="#66000000">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbNameOrganization}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>-->
+        <Label 
+            x:Name="NameOrganization"
+               Grid.Row="10"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="250"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock>Наименование организации</TextBlock>
+        </Label>
+        <Border
+            x:Name="lbOrganization"
+            Grid.Row="10"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="175"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <!--_______________Grid.Row10_______________-->
+        <Label 
+               Grid.Row="11"
+               Grid.Column="1"
+               Margin="50,0,0,0"
+               Height="25"
+            Width="250"
+               VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic">
+            <TextBlock Width="121">Юридическое лицо?</TextBlock>
+        </Label>
+        <Border
+            Grid.Row="11"
+            Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,5"
+            Height="2"
+            Width="131"
+            Background="#174F0E"
+            CornerRadius="2"
+            />
+        <Label Content="Да"
+               Grid.Row="11"
+               Grid.Column="1"
+               Foreground="Black" 
+            FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic"
+               HorizontalAlignment="Right"
+               Height="25"
+               VerticalAlignment="Center"
+               Margin="0,0,140,0"/>
+        <Label Content="Нет"
+               Grid.Row="11"
+               Grid.Column="1"
+               Foreground="Black" 
+               FontFamily="Elephant" 
+               FontWeight="Bold" 
+               FontStyle="Italic"
+               HorizontalAlignment="Right"
+               Height="25"
+               VerticalAlignment="Center"
+               Margin="0,0,75,0"/>
+        <RadioButton
+            x:Name="rbYes"
+            Grid.Row="11"
+            Grid.Column="1"
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center" 
+            Margin="433,4,112,4"
+            Checked="rbYes_Checked"/>
+        <RadioButton
+            x:Name="rbNo"
+            Grid.Row="11"
+            Grid.Column="1"
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center" 
+            Margin="500,4,46,4"
+            Checked="rbNo_Checked"/>
+       
+        <Image Source="/Image/woodtn.png" 
+                    Grid.Row="12"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Width="150"
+            Height="25" 
+               VerticalAlignment="Bottom"/>
+        <Button
+            Content="Зарегестрироваться"
+            Grid.Row="12"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Width="150"
+            Height="25" 
+            BorderBrush="{x:Null}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+             FontFamily="Elephant" 
+            FontWeight="Bold" 
+            FontStyle="Italic"
+            Margin="0,0,0,0" Background="{x:Null}">
+        </Button>
     </Grid>
 </Window>

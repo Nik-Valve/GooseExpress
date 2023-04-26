@@ -126,5 +126,14 @@
   <ItemGroup>
     <Resource Include="Image\2 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\free-icon-thought-bubble-7612688.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\woodtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wind\woodtn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

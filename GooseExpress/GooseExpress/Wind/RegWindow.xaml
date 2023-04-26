@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="RegWindow" Height="450" Width="800">
     <Window.Resources>
+        <Style x:Key="btnShutdown" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="MyButtonStyle" TargetType="Button">
                 <Setter Property="OverridesDefaultStyle" Value="True"/>
                 <Setter Property="Margin" Value="5"/>
@@ -114,11 +137,17 @@
             <ImageBrush ImageSource="/Image/WhatsApp Image 2023-04-05 at 19.40.25.png" 
                         Stretch="UniformToFill"/>
         </Grid.Background>
-        <Image Source="/Image/exit.png"
-               HorizontalAlignment="Left"
-               Margin=" 20,10,0,0"
-               Width="30"
-               Height="30"/>
+        <Button
+            HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource btnShutdown}"
+            Click="Button_Click_1">
+            <Image Width="30" Height="30" Source="/Image/exit.png"
+               />
+        </Button>
 
         <Border 
                     Height="250"
@@ -238,5 +267,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <!--_________________________________PASSWORD_________________________________________-->
+
     </Grid>
 </Window>
