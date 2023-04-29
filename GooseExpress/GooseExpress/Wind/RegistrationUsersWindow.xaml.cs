@@ -55,5 +55,12 @@ namespace GooseExpress.Wind
         private void Button_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
+        }
     }
 }

@@ -121,6 +121,53 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="btnMemberPas" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btnRegistration" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -268,6 +315,29 @@
             </Button.Resources>
         </Button>
         <!--_________________________________PASSWORD_________________________________________-->
-
+        <Button 
+            x:Name="pbMemberPas"
+            Style="{StaticResource btnMemberPas}"
+            Content="Забыл пароль"
+            Grid.Row="3"
+            Width="100"
+            FontSize="10"
+            Height="19"
+            Margin="280,15,0,0"
+            HorizontalAlignment="Left"
+            Click="pbMemberPas_Click"
+            Foreground="White"/>
+        <Button 
+            x:Name="pbRegistration"
+            Style="{StaticResource btnRegistration}"
+            Content="Зарегестрироваться"
+            Grid.Row="3"
+            FontSize="10"
+            Width="150"
+            Height="20"
+            Margin="269,50,0,0"
+             HorizontalAlignment="Left"
+            Click="pbRegistration_Click"
+            Foreground="White"/>
     </Grid>
 </Window>

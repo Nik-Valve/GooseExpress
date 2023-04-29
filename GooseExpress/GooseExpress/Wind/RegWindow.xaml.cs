@@ -26,14 +26,29 @@ namespace GooseExpress.Wind
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RegistrationUsersWindow ruw = new RegistrationUsersWindow();
-            ruw.Show();
+            MainWind mainWind = new MainWind();
+            mainWind.Show();
             this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void pbMemberPas_Click(object sender, RoutedEventArgs e)
+        {
+            ForgotWind forgotWind = new ForgotWind();
+            forgotWind.Show();
+            this.Close();
+        }
+
+        private void pbRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
+            RegistrationUsersWindow ruw = new RegistrationUsersWindow();
+            ruw.Show();
+            this.Close();
         }
     }
 }

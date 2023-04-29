@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wind/woodtn.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wind/woodwhite.png")]
 
 

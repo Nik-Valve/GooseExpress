@@ -16,3 +16,7 @@ C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.ex
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\GooseExpress.pdb
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegistrationUsersWindow.g.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegistrationUsersWindow.baml
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\ForgotWind.g.cs
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\MainWind.g.cs
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\ForgotWind.baml
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\MainWind.baml
