@@ -1,11 +1,11 @@
-﻿<Window x:Class="GooseExpress.Wind.RegistrationUsersWindow"
+﻿<Window x:Class="GooseExpress.Wind.SettingWind"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GooseExpress.Wind"
         mc:Ignorable="d"
-        Title="RegistrationUsersWindow" Height="450" Width="800">
+        Title="SettingWind" Height="450" Width="800">
     <Window.Resources>
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -86,39 +86,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="tbNumber" TargetType="TextBox">
-            <Setter Property="Background" Value="{x:Null}"/>
-            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="BorderBrush" Value="#FF512121"/>
-            <Setter Property="Padding" Value="10,0,0,0"/>
-            <Setter Property="FontFamily" Value="Ubuntu"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TextBox">
-                        <Grid x:Name="root" Height="20" 
-                              Width="180" 
-                              SnapsToDevicePixels="True"
-                              VerticalAlignment="Bottom">
-                            <Border x:Name="Background" 
-                                    BorderThickness="1" 
-                                    CornerRadius="2" 
-                                    Background="{x:Null}"
-                                    BorderBrush="{x:Null}"
-                                    />
-                            <ScrollViewer x:Name="PART_ContentHost" 
-                                          BorderThickness="0"
-                                          Padding="10"
-                                          IsTabStop="False"
-                                          Background="{x:Null}"
-                                          TextElement.Foreground="White" Foreground="Black"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
         <Style x:Key="tbCity" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
@@ -152,7 +119,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="tbName" TargetType="TextBox">
+        <Style x:Key="tbLastName" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
             <Setter Property="Height" Value="35"/>
@@ -165,7 +132,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="300" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -185,7 +152,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="tbLastName" TargetType="TextBox">
+        <Style x:Key="tbFirstName" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
             <Setter Property="Height" Value="35"/>
@@ -198,7 +165,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="300" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -231,7 +198,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="300" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -251,7 +218,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="tbAddres" TargetType="TextBox">
+        <Style x:Key="tbAddress" TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="VerticalContentAlignment" Value="Bottom"/>
             <Setter Property="Height" Value="35"/>
@@ -264,7 +231,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="300" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -297,7 +264,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="300" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -330,7 +297,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="20" 
-                              Width="200" 
+                              Width="180" 
                               SnapsToDevicePixels="True"
                               VerticalAlignment="Bottom">
                             <Border x:Name="Background" 
@@ -350,14 +317,41 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+        <Style x:Key="tbNumber" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="180" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -372,29 +366,32 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="/Image/noname.png" 
-                        Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Image/Settingback.png"/>
         </Grid.Background>
         <Button
             x:Name="btnreturn"
             HorizontalAlignment="Left"
-               VerticalAlignment="Center"
-               Margin="10,0,0,0"
+            VerticalAlignment="Center"
+            Margin="10,0,0,0"
             Background="{x:Null}"
             BorderBrush="{x:Null}"
             Style="{StaticResource MyButtonStyle}"
-            IsMouseCapturedChanged="Button_IsMouseCapturedChanged"
-            Click="Button_Click">
-            <Image Width="30" Height="30" Source="/Image/2 (1).png"
+            Click="btnreturn_Click">
+            <Image Width="30"
+                   Height="30"
+                   Source="/Image/2 (1).png"
                />
         </Button>
         <Border 
                 Grid.Column="1"
                 Grid.RowSpan="13"
-                Width="500"
+                Width="400"
                 Height="350"
                 Background="#63786B"
                 CornerRadius="10"
@@ -402,35 +399,251 @@
                 VerticalAlignment="Top" 
                 Grid.ColumnSpan="3" 
                 Margin="36,31,0,0"/>
+
+
+        <Label
+            Grid.Row="1"
+            Content="Серия и номер паспорта"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,10,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="1"
+            Content="Город"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,10,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="3"
+            Content="Фамилия"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="4"
+            Content="Имя"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="5"
+            Content="Отчество"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="6"
+            Content="Адрес"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="7"
+            Content="Телефон"
+            Grid.Column="1"
+            Width="150"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Label
+            Grid.Row="8"
+            Content="Наименовавние организации"
+            Grid.Column="1"
+            Width="185"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,0,0,0"
+            Foreground="Black"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"/>
+        <Border
+            Grid.Row="8"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="180"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,10"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="7"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="60"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,10"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="6"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="42"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,10"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="5"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="70"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,10"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="4"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="35"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,10"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="3"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="60"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,7"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="45"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,7"
+            Background="#174F0E"/>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            CornerRadius="2"
+            Width="148"
+            Height="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="50,0,0,0"
+            Background="#174F0E"/>
+        <Button Width="60"
+                Height="60"
+                Style="{StaticResource btnRet}"
+                Background="{x:Null}"
+                Grid.Row="9"
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                Margin="0,10,200,0"
+                HorizontalAlignment="Right" 
+                Click="Button_Click_1"
+                BorderBrush="{x:Null}">
+            <Image Source="/Image/Sun.png"/>
+        </Button>
+        <Button Width="60"
+                Height="60"
+                Style="{StaticResource btnRet}"
+                Background="{x:Null}"
+                Grid.Row="9"
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                Margin="100,10,130,0"
+                HorizontalAlignment="Right"
+                Click="Button_Click_2"
+                BorderBrush="{x:Null}">
+            <Image Source="/Image/Moon.png"/>
+        </Button>
+
         <Border Width="100"
                 Height="25"
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="310,0,0,5"
+                Margin="300,0,0,0"
                 />
         <TextBox    x:Name="tbLogin" 
                     Style="{StaticResource tbSeria}"
-                    Margin="311,0,21,5"
-                    Grid.Row="2"
+                    Margin="300,0,21,5"
+                    Grid.Row="1"
                     Grid.Column="1"
-HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
                     Width="100"
                     Height="20"
                     CaretBrush="Black"
                    />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="4561"
-                   Grid.Row="2"
+                   Text="571932"
+                   Grid.Row="1"
                        Grid.Column="1"
                    Foreground="#66000000"
-                   VerticalAlignment="Center"
+                   VerticalAlignment="Bottom"
                    HorizontalAlignment="Left"
-                   Margin="346,0,0,5">
+                   Margin="328,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -444,36 +657,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-
-
         <Border Width="100"
                 Height="25"
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                VerticalAlignment="Center"
-                Margin="416,0,31,5" 
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="199,0,0,0"
                 />
         <TextBox    x:Name="tbNumber" 
                     Style="{StaticResource tbNumber}"
-                    Margin="416,0,31,5"
-                    Grid.Row="2"
+                    Margin="199,0,21,5"
+                    Grid.Row="1"
                     Grid.Column="1"
-                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
                     Width="100"
                     Height="20"
                     CaretBrush="Black"
                    />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="211825"
-                   Grid.Row="2"
-                   Grid.Column="1"
+                   Text="4561"
+                   Grid.Row="1"
+                       Grid.Column="1"
                    Foreground="#66000000"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Right"
-                   Margin="0,0,70,5">
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="235,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -487,66 +700,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="2"
-               Grid.Column="1"
-                HorizontalAlignment="Left"
-            Margin="50,0,0,0"
-               Height="25"
-               VerticalAlignment="Center"
-               Foreground="Black"
-            FontFamily="Elephant" 
-            FontWeight="Bold"
-            Content="Серия и номер паспорта"
-            FontStyle="Italic">
-        </Label>
-        <Border
-            Grid.Row="2"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="157"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row2_______________-->
-
-
-        <Border Width="206"
+        <Border Width="200"
                 Height="25"
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="316,0,0,5"
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Grid.ColumnSpan="3"
+                Margin="200,0,0,0"
                 />
         <TextBox    x:Name="tbCity" 
                     Style="{StaticResource tbCity}"
-                    Margin="0,0,168,5"
-                    Grid.Row="3"
+                    Margin="200,0,21,5"
+                    Grid.Row="2"
                     Grid.Column="1"
-                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
                     Width="200"
-                    Height="25"
-                    HorizontalAlignment="Right"
+                    Height="20"
                     CaretBrush="Black"
-                    FontSize="14" Grid.ColumnSpan="3"
                    />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="Петропавловск-Камчатский"
-                   Margin="0,0,40,5"
-                   Grid.Row="3"
-                   Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="200"
-                    Height="20"
-                    HorizontalAlignment="Right"
-                   Foreground="#66000000">
+                   Text="Москва"
+                   Grid.Row="2"
+                       Grid.Column="1"
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="270,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -560,65 +743,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="3"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="50"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock>Город</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="3"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="45"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-
-
-        <!--_______________Grid.Row3_______________-->
-        <Border Width="300"
+        <Border Width="200"
                 Height="25"
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="222,0,0,5"
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
+                Margin="200,0,0,0"
                 />
         <TextBox    x:Name="tbLastName" 
                     Style="{StaticResource tbLastName}"
-                   Width="300"
-                Height="25"
-                Grid.Row="4"
-                Grid.Column="1"
-                BorderThickness="2"
-                BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left"
+                    Margin="200,0,21,5"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="Black"
                    />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="Уланова"
-                   Margin="242,0,0,5"
-                   Grid.Row="4"
+                   Text="Шульгин"
+                   Grid.Row="3"
                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="180"
-                    Height="20"
-                    HorizontalAlignment="Left"
-                   Foreground="#66000000">
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="270,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -632,70 +786,42 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="4"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="100"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock>Фамилия</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="4"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="70"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row4_______________-->
-        <Border Width="300"
+        <Border Width="200"
                 Height="25"
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="200,0,0,0"
                 />
-        <TextBox    x:Name="tbName" 
-                    Style="{StaticResource tbName}"
-                    Width="300"
-                    Height="25"
-                    Grid.Row="5"
+        <TextBox    x:Name="tbFirstName" 
+                    Style="{StaticResource tbFirstName}"
+                    Margin="200,0,21,5"
+                    Grid.Row="4"
                     Grid.Column="1"
-                    BorderThickness="2"
-                    BorderBrush="White"
-                    Margin="222,0,0,5"
                     HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="Black"
                    />
-
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="Алиса"
-                   Margin="242,0,0,5"
-                   Grid.Row="5"
-                   Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="180"
-                    Height="20"
-                    HorizontalAlignment="Left"
-                   Foreground="#66000000">
+                   Text="Ростислав"
+                   Grid.Row="4"
+                       Grid.Column="1"
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="270,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
                             Value="Collapsed"/>
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text,ElementName=tbName}" Value="">
+                        <DataTrigger Binding="{Binding Text,ElementName=tbFirstName}" Value="">
                             <Setter Property="Visibility" 
                                     Value="Visible"/>
                         </DataTrigger>
@@ -703,63 +829,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="5"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="100"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock>Имя</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="5"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="35"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row5_______________-->
-        <Border Width="300"
+        <Border Width="200"
                 Height="25"
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="200,0,0,0"
                 />
         <TextBox    x:Name="tbPatronymic" 
                     Style="{StaticResource tbPatronymic}"
-                                       Width="300"
-                Height="25"
-                Grid.Row="6"
-                Grid.Column="1"
-                BorderThickness="2"
-                BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left"/>
-
+                    Margin="200,0,21,5"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="Black"
+                   />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="Александровна"
-                   Margin="242,0,0,5"
-                   Grid.Row="6"
+                   Text="Петрович"
+                   Grid.Row="5"
                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="180"
-                    Height="20"
-                    HorizontalAlignment="Left"
-                   Foreground="#66000000">
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="270,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -773,62 +872,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="6"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="100"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock >Отчество</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="6"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="75"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row6_______________-->
-        <Border Width="300"
+        <Border Width="200"
                 Height="25"
-                Grid.Row="7"
+                Grid.Row="6"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left" Grid.ColumnSpan="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="200,0,0,0"
                 />
         <TextBox    x:Name="tbAddress" 
-                    Style="{StaticResource tbAddres}"
-                                      Width="300"
-                Height="25"
-                Grid.Row="7"
-                Grid.Column="1"
-                BorderThickness="2"
-                BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left"/>
+                    Style="{StaticResource tbAddress}"
+                    Margin="200,0,21,5"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="20"
+                    CaretBrush="Black"
+                   />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="Судостроительная улица, 12"
-                   Margin="242,0,0,0"
-                   Grid.Row="7"
+                   Text="Горьковская ул 5 к1"
+                   Grid.Row="6"
                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="180"
-                    Height="20"
-                    HorizontalAlignment="Left"
-                   Foreground="#66000000">
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="240,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -842,62 +915,36 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="7"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-               Width="100"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Left"
-               Foreground="Black" 
-               FontFamily="Elephant" 
-               FontWeight="Bold" 
-               FontStyle="Italic">
-            <TextBlock Width="35">Адрес</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="7"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="45"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row7_______________-->
-        <Border Width="300"
+        <Border Width="150"
                 Height="25"
-                Grid.Row="8"
+                Grid.Row="7"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left" />
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="250,0,0,0"
+                />
         <TextBox    x:Name="tbPhone" 
                     Style="{StaticResource tbPhone}"
-                                       Width="300"
-                Height="25"
-                Grid.Row="8"
-                Grid.Column="1"
-                BorderThickness="2"
-                BorderBrush="White"
-                Margin="222,0,0,5"
-                HorizontalAlignment="Left"/>
-
+                    Margin="250,0,21,5"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="150"
+                    Height="20"
+                    CaretBrush="Black"
+                   />
         <TextBlock IsHitTestVisible="False" 
                    FontSize="14" 
-                   Text="8927451932"
-                   Margin="242,0,0,5"
-                   Grid.Row="8"
+                   Text="89266685317"
+                   Grid.Row="7"
                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="180"
-                    Height="20"
-                    HorizontalAlignment="Left"
-                   Foreground="#66000000">
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="280,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -911,75 +958,40 @@ HorizontalAlignment="Left"
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <Label 
-               Grid.Row="8"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-               Width="100"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Left"
-               Foreground="Black" 
-               FontFamily="Elephant" 
-               FontWeight="Bold" 
-               FontStyle="Italic">
-            <TextBlock>Телефон</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="8"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="63"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row8_______________-->
-        <Border
-            x:Name="bOrganization"
-            Width="206"
+        
+        <!--Если у этого пользователя нет записи об организации,
+        
+        то поля не должны отображаться-->
+        <Border Width="150"
                 Height="25"
-                Grid.Row="10"
+                Grid.Row="8"
                 Grid.Column="1"
                 BorderThickness="2"
                 BorderBrush="White"
-                Margin="316,0,0,5"
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Grid.ColumnSpan="3"
+                Margin="250,0,0,0"
                 />
         <TextBox    x:Name="tbNameOrganization" 
                     Style="{StaticResource tbNameOrganization}"
-                    Margin="0,0,160,5"
-                    Grid.Row="10"
+                    Margin="250,0,21,5"
+                    Grid.Row="8"
                     Grid.Column="1"
-                    VerticalAlignment="Top"
-                    Width="200"
-                    Height="25"
-                    HorizontalAlignment="Right"
-                    CaretBrush="Black"
-                    FontSize="14" Grid.ColumnSpan="3"
-                   >
-            <TextBox.ToolTip>
-                <ToolTip>
-                    АО Комета
-                </ToolTip>
-            </TextBox.ToolTip>
-        </TextBox>
-        <!--<TextBlock 
-            x:Name="tblOrganization"
-                   IsHitTestVisible="False" 
-                   FontSize="14" 
-                   Text="АО Комета"
-                   Margin="0,3,40,3"
-                   Grid.Row="10"
-                   Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Width="200"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Width="150"
                     Height="20"
-                    HorizontalAlignment="Right"
-                   Foreground="#66000000">
+                    CaretBrush="Black"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   FontSize="14" 
+                   Text="4561"
+                   Grid.Row="8"
+                   Grid.Column="1"
+                   Foreground="#66000000"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="310,0,0,5">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility"
@@ -992,123 +1004,26 @@ HorizontalAlignment="Left"
                     </Style.Triggers>
                 </Style>
             </TextBlock.Style>
-        </TextBlock>-->
-        <Label 
-            x:Name="NameOrganization"
-               Grid.Row="10"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="250"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock>Наименование организации</TextBlock>
-        </Label>
-        <Border
-            x:Name="lbOrganization"
-            Grid.Row="10"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="175"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <!--_______________Grid.Row10_______________-->
-        <Label 
-               Grid.Row="11"
-               Grid.Column="1"
-               Margin="50,0,0,0"
-               Height="25"
-            Width="250"
-               VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic">
-            <TextBlock Width="121">Юридическое лицо?</TextBlock>
-        </Label>
-        <Border
-            Grid.Row="11"
-            Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Margin="50,0,0,5"
-            Height="2"
-            Width="131"
-            Background="#174F0E"
-            CornerRadius="2"
-            />
-        <Label Content="Да"
-               Grid.Row="11"
-               Grid.Column="1"
-               Foreground="Black" 
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            FontStyle="Italic"
-               HorizontalAlignment="Right"
-               Height="25"
-               VerticalAlignment="Center"
-               Margin="0,0,140,0"/>
-        <Label Content="Нет"
-               Grid.Row="11"
-               Grid.Column="1"
-               Foreground="Black" 
-               FontFamily="Elephant" 
-               FontWeight="Bold" 
-               FontStyle="Italic"
-               HorizontalAlignment="Right"
-               Height="25"
-               VerticalAlignment="Center"
-               Margin="0,0,75,0"/>
-        <RadioButton
-            x:Name="rbYes"
-            Grid.Row="11"
-            Grid.Column="1"
-            HorizontalContentAlignment="Left"
-            VerticalContentAlignment="Center" 
-            Margin="433,4,112,4"
-            Checked="rbYes_Checked"/>
-        <RadioButton
-            x:Name="rbNo"
-            Grid.Row="11"
-            Grid.Column="1"
-            HorizontalContentAlignment="Left"
-            VerticalContentAlignment="Center" 
-            Margin="500,4,46,4"
-            Checked="rbNo_Checked"/>
-       
-        <Image Source="/Image/woodtn.png" 
-                    Grid.Row="12"
-            Grid.RowSpan="2"
-            Grid.Column="1"
-            Width="150"
-            Height="25" 
-               VerticalAlignment="Bottom"
-               Margin="0,0,0,15"/>
+        </TextBlock>
         <Button
-            Content="Зарегестрироваться"
-            Style="{StaticResource btnRet}"
-            Grid.Row="12"
-            Grid.RowSpan="2"
-            Grid.Column="1"
+            x:Name="btnAva"
+            Grid.Row="4"
+            Grid.RowSpan="4"
+            Height="150"
             Width="150"
-            Height="25" 
-            BorderBrush="{x:Null}"
+            Grid.Column="0"
+            VerticalAlignment="Center"
             HorizontalAlignment="Center"
-            VerticalAlignment="Bottom"
-            FontFamily="Elephant" 
-            FontWeight="Bold" 
-            Click="Button_Click_1"
-            FontStyle="Italic"
-            Margin="0,0,0,15" Background="{x:Null}">
+            Margin="0,0,0,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource MyButtonStyle}"
+            Click="btnAva_Click">
+            <Image x:Name="imgAva"
+                   Width="150" 
+                   Height="150"
+                   Source="/Image/employees.png"
+               />
         </Button>
     </Grid>
 </Window>

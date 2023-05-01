@@ -59,17 +59,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Wind\AboutCompany.xaml.cs">
+      <DependentUpon>AboutCompany.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wind\FeedBackWind.xaml.cs">
+      <DependentUpon>FeedBackWind.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wind\ForgotWind.xaml.cs">
       <DependentUpon>ForgotWind.xaml</DependentUpon>
     </Compile>
     <Compile Include="Wind\MainWind.xaml.cs">
       <DependentUpon>MainWind.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Wind\OrderStatus.xaml.cs">
+      <DependentUpon>OrderStatus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wind\RegistrationUsersWindow.xaml.cs">
       <DependentUpon>RegistrationUsersWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Wind\RegWhiteWind.xaml.cs">
+      <DependentUpon>RegWhiteWind.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wind\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wind\SenderWind.xaml.cs">
+      <DependentUpon>SenderWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wind\SettingWind.xaml.cs">
+      <DependentUpon>SettingWind.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +117,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Wind\AboutCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wind\FeedBackWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Wind\ForgotWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,11 +133,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Wind\OrderStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Wind\RegistrationUsersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Wind\RegWhiteWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Wind\RegWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wind\SenderWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wind\SettingWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +196,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Wind\WoodWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\MainBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\free-icon-setting-3288743.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\free-icon-opposite-arrows-6066855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Settingback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Moon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

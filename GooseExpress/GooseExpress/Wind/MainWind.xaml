@@ -6,7 +6,594 @@
         xmlns:local="clr-namespace:GooseExpress.Wind"
         mc:Ignorable="d"
         Title="MainWind" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btnCalculate" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="0" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbOutput" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="200" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="tbInput" TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF512121"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="Ubuntu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" Height="20" 
+                              Width="200" 
+                              SnapsToDevicePixels="True"
+                              VerticalAlignment="Bottom">
+                            <Border x:Name="Background" 
+                                    BorderThickness="1" 
+                                    CornerRadius="2" 
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    />
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          BorderThickness="0"
+                                          Padding="10"
+                                          IsTabStop="False"
+                                          Background="{x:Null}"
+                                          TextElement.Foreground="White" Foreground="Black"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+
+
+
+
+
+
+
+
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="{x:Null}"
+                  BorderBrush="#FF97A0A5"
+                  BorderThickness="1" />
+                <Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="1" 
+                  Background="{x:Null}" 
+                  BorderBrush="#FF97A0A5"
+                  BorderThickness="0,0,1,0" />
+                <Path 
+                  x:Name="Arrow"
+                  Grid.Column="1"     
+                  Fill="White"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"
+                />
+            </Grid>
+            <!--<ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#808080" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#E0E0E0" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Border" Property="Background" Value="#EEEEEE" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="#AAAAAA" />
+                <Setter Property="Foreground" Value="#888888"/>
+                <Setter TargetName="Arrow" Property="Fill" Value="#888888" />
+            </Trigger>
+        </ControlTemplate.Triggers>-->
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
+            <Border x:Name="PART_ContentHost" Focusable="False" Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+
+        <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource ComboBoxToggleButton}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite" IsHitTestVisible="False"  Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="3,3,23,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            HorizontalAlignment="Left" 
+                            VerticalAlignment="Center" 
+                            Margin="3,3,23,3"
+                            Focusable="True" 
+                            Background="{x:Null}"
+                            Foreground="White"
+                            Visibility="Hidden"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                                <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border 
+                                x:Name="DropDownBorder"
+                                Background="#FF3F3F3F"
+
+                                BorderThickness="1"
+                                BorderBrush="#888888"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable"  Value="true">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+
+        <!-- SimpleStyles: ComboBoxItem -->
+        <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border Name="Border"
+                              Padding="2"
+                              SnapsToDevicePixels="true">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter TargetName="Border" Property="Background" Value="#FF4F4F4F"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="HoverUnderlineStyleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock x:Name="TextBlock">
+                        <ContentPresenter Content="{TemplateBinding  Content}" ContentTemplate="{TemplateBinding  ContentTemplate}"/>
+                        </TextBlock>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="TextBlock" Property="TextBlock.TextDecorations" Value="Underline"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Image/MainBack.png" 
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button
+            x:Name="btnreturn"
+            HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource MyButtonStyle}"
+            Click="btnreturn_Click">
+            <Image Width="30" Height="30"
+                   Source="/Image/2 (1).png"
+               />
+        </Button>
+        <Button
+            x:Name="btnSetting"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="0,0,10,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource MyButtonStyle}"
+            Click="btnSetting_Click">
+            <Image Width="30" Height="30" Source="/Image/free-icon-setting-3288743.png">
+            </Image>
+        </Button>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,0">
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                Width="100"
+                Height="25"
+                FontSize="18"
+                Foreground="White"
+                Click="Button_Click_6"
+                Margin="30,0,0,0">
+                <Button.Content>
+                    <TextBlock x:Name="Main">
+                        Главная
+                    </TextBlock>
+                </Button.Content>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="100"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_5"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Feedback">
+                        Отзывы
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="150"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_4"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Order">
+                    Состояние заказа
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="100"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_3"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Company">
+                    О компании
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="150"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_2"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="History">
+                    История заказов
+                </TextBlock>
+            </Button>
+        </StackPanel>
+        <!--Padding="100,0,200,0"-->
+        <ScrollViewer x:Name="scrollViewer" 
+                      Grid.Row="2" 
+                      HorizontalScrollBarVisibility="Hidden"
+                      VerticalScrollBarVisibility="Hidden"
+                      CanContentScroll="True"
+                      PreviewMouseLeftButtonDown="scrollViewer_PreviewMouseLeftButtonDown"
+                      PreviewMouseMove="scrollViewer_PreviewMouseMove"
+                      PreviewMouseLeftButtonUp="scrollViewer_PreviewMouseLeftButtonUp"
+                      PreviewMouseWheel="scrollViewer_PreviewMouseWheel">
+            <Grid x:Name="galleryGrid" 
+                  Margin="150,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+                <Image Grid.Column="2" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+                <Image Grid.Column="4" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+                <Image Grid.Column="6" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+                <Image Grid.Column="8" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+            </Grid>
+        </ScrollViewer>
+        <Border Grid.Row="3"
+                Grid.RowSpan="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="25,0,0,0"
+                Width="200"
+                Height="2"
+                Background="White"/>
+        <Border Grid.Row="3"
+                Grid.RowSpan="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="280,0,0,0"
+                Width="200"
+                Height="2"
+                Background="White"/>
+        <Border Grid.Row="3"
+                Grid.RowSpan="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="500,0,0,0"
+                Width="150"
+                Height="2"
+                Background="White"/>
+        <Button
+            Content="Рассчитать"
+            Style="{StaticResource btnCalculate}"
+            Grid.Row="3"
+            Width="100"
+            Height="20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0,0,20,0" 
+            BorderBrush="{x:Null}"
+            FontFamily="Elephant" 
+            FontWeight="Bold"
+            FontStyle="Italic"
+            Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Wind/WoodWhite.png"/>
+            </Button.Background>
+        </Button>
+        <Button
+            Style="{StaticResource btnCalculate}"
+            Grid.Row="3"
+               Grid.RowSpan="2"
+               Width="30"
+               Height="27"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+                Click="Button_Click_1"
+               Margin="240,28,0,0">
+            <Image Width="20"
+                   Height="20"
+                   Grid.Column="0"
+                   Grid.Row="1">
+                <Image.Source>
+                    <BitmapImage UriSource="/Image/free-icon-opposite-arrows-6066855.png" 
+                                 Rotation="Rotate90" />
+                </Image.Source>
+            </Image>
+        </Button>
+
+
+
+
+        <TextBox    x:Name="tbOut" 
+                    Style="{StaticResource tbOutput}"
+                  Grid.Row="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="25,0,0,5"
+                Width="200"
+                Height="25"
+                    CaretBrush="White"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   Text="Москва"
+                   FontSize="14"
+                   Foreground="#7CFFFFFF"
+                   Grid.Row="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                   Margin="100,0,0,5">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbOut}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox    x:Name="tbInp" 
+                    Style="{StaticResource tbInput}"
+                  Grid.Row="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="280,0,0,5"
+                Width="200"
+                Height="25"
+                    CaretBrush="White"
+                   />
+        <TextBlock IsHitTestVisible="False" 
+                   Text="Санкт-Петербург"
+                   FontSize="14"
+                   Foreground="#7CFFFFFF"
+                   Grid.Row="3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                   Margin="330,24,0,0">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility"
+                            Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text,ElementName=tbInp}" Value="">
+                            <Setter Property="Visibility" 
+                                    Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <ComboBox Grid.Row="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                   IsEditable="True"
+ IsReadOnly="True"
+                Margin="500,0,0,0"
+                Width="150"
+                Height="20"
+                Background="White"
+                Text="Выбор">
+            <ComboBoxItem Name="Item1">Item1</ComboBoxItem>
+            <ComboBoxItem Name="Item2">Item2</ComboBoxItem>
+            <ComboBoxItem Name="Item3">Item3</ComboBoxItem>
+            <ComboBoxItem Name="Item4">Item4</ComboBoxItem>
+            <ComboBoxItem Name="Item5">Item5</ComboBoxItem>
+            <ComboBoxItem Name="Item6">Item6</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>
