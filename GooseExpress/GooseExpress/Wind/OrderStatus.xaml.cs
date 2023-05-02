@@ -22,6 +22,52 @@ namespace GooseExpress.Wind
         public OrderStatus()
         {
             InitializeComponent();
+            Order.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void btnreturn_Click(object sender, RoutedEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
+        }
+
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            SettingWind settingWind = new SettingWind();
+            settingWind.Show();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWind mainWind = new MainWind();
+            mainWind.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FeedBackWind feedBackWind = new FeedBackWind();
+            feedBackWind.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AboutCompanyWind aboutCompanyWind = new AboutCompanyWind();
+            aboutCompanyWind.Show();
+            this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

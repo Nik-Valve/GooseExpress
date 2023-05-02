@@ -32,3 +32,5 @@ C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\OrderStatu
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompany.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\FeedBackWind.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\OrderStatus.baml
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompanyWind.g.cs
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompanyWind.baml

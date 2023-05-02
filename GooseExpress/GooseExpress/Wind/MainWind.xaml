@@ -309,6 +309,19 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="Button" x:Key="HoverUnderlineStyleButtonNone">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock x:Name="TextBlock">
+                        <ContentPresenter Content="{TemplateBinding  Content}" ContentTemplate="{TemplateBinding  ContentTemplate}"/>
+                        </TextBlock>
+                        <ControlTemplate.Triggers>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -353,12 +366,11 @@
                     HorizontalAlignment="Center"
                     Margin="0,0,0,0">
             <Button
-                Style="{StaticResource HoverUnderlineStyleButton}"
+                Style="{StaticResource HoverUnderlineStyleButtonNone}"
                 Width="100"
                 Height="25"
                 FontSize="18"
                 Foreground="White"
-                Click="Button_Click_6"
                 Margin="30,0,0,0">
                 <Button.Content>
                     <TextBlock x:Name="Main">
@@ -426,7 +438,8 @@
                       PreviewMouseLeftButtonUp="scrollViewer_PreviewMouseLeftButtonUp"
                       PreviewMouseWheel="scrollViewer_PreviewMouseWheel">
             <Grid x:Name="galleryGrid" 
-                  Margin="150,0,0,0">
+                  Margin="150,0,0,0"
+                  Height="200">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -442,11 +455,11 @@
                     <ColumnDefinition Width="500"></ColumnDefinition>
                     <ColumnDefinition Width="150"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
-                <Image Grid.Column="2" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
-                <Image Grid.Column="4" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
-                <Image Grid.Column="6" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
-                <Image Grid.Column="8" Margin="10,10,10,10" Source="/Image/BackroundForgot.png"/>
+                <Image Grid.Column="0" Margin="0,0,0,0" Source="/Image/BackroundForgot.png" Height="250"/>
+                <Image Grid.Column="2" Margin="0,0,0,0" Source="/Image/BackroundForgot.png" Height="250"/>
+                <Image Grid.Column="4" Margin="0,0,0,0" Source="/Image/BackroundForgot.png" Height="250"/>
+                <Image Grid.Column="6" Margin="0,0,0,0" Source="/Image/BackroundForgot.png" Height="250"/>
+                <Image Grid.Column="8" Margin="0,0,0,0" Source="/Image/BackroundForgot.png" Height="250"/>
             </Grid>
         </ScrollViewer>
         <Border Grid.Row="3"
@@ -581,8 +594,8 @@
         <ComboBox Grid.Row="3"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                   IsEditable="True"
- IsReadOnly="True"
+                IsEditable="True"
+                IsReadOnly="True"
                 Margin="500,0,0,0"
                 Width="150"
                 Height="20"

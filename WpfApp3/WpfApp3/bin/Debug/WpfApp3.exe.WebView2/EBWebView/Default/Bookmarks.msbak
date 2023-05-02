@@ -1,0 +1,69 @@
+{
+   "checksum": "4ffb7a66b0740a5b36f6da36e2f0fffc",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13327507683471162",
+            "date_last_used": "0",
+            "guid": "c9798b18-84fe-4364-9a90-b00e9770853a",
+            "id": "8",
+            "name": "ASUS Software Portal - Exclusive technology",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.asus.com/Software-and-Innovations-Portal/"
+         }, {
+            "date_added": "13327507683471057",
+            "date_last_used": "0",
+            "guid": "a14879fc-6d38-45f0-85a0-68ea7c9dbe8d",
+            "id": "7",
+            "name": "MyASUS Software - Get the best from ASUS PC",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.asus.com/ASUS-Software/"
+         }, {
+            "date_added": "13327507683470540",
+            "date_last_used": "0",
+            "guid": "61771626-62c7-475e-a974-4770949c6070",
+            "id": "6",
+            "name": "McAfee LiveSafe",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://home.mcafee.com/root/campaign.aspx?cid=246818"
+         } ],
+         "date_added": "13327507683439230",
+         "date_last_used": "0",
+         "date_modified": "13327507683471162",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Панель избранного",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13327507683439236",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Другое избранное",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13327507683439238",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Избранное на мобильных устройствах",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

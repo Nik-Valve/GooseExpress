@@ -62,6 +62,9 @@
     <Compile Include="Wind\AboutCompany.xaml.cs">
       <DependentUpon>AboutCompany.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Wind\AboutCompanyWind.xaml.cs">
+      <DependentUpon>AboutCompanyWind.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wind\FeedBackWind.xaml.cs">
       <DependentUpon>FeedBackWind.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Wind\AboutCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wind\AboutCompanyWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

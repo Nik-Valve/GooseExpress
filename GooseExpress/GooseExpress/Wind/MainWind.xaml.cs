@@ -22,6 +22,7 @@ namespace GooseExpress.Wind
         public MainWind()
         {
             InitializeComponent();
+            Main.TextDecorations = TextDecorations.Underline;
 
         }
         Point scrollMousePoint = new Point();
@@ -74,39 +75,25 @@ namespace GooseExpress.Wind
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string output = tbOut.Text;
-            tbOut.Text = tbInp.Text;
-            tbInp.Text = output;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            History.TextDecorations = TextDecorations.Underline;
-            Main.TextDecorations=null;
-            Feedback.TextDecorations=null;
-            Order.TextDecorations=null;
-            Company.TextDecorations=null;
-            History.TextDecorations=null;
+
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            History.TextDecorations=null;
-            Main.TextDecorations=null;
-            Feedback.TextDecorations=null;
-            Order.TextDecorations=null;
-            Company.TextDecorations = TextDecorations.Underline;
-            History.TextDecorations=null;
+            AboutCompanyWind aboutCompanyWind = new AboutCompanyWind();
+            aboutCompanyWind.Show();
+            this.Close();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            History.TextDecorations = null;
-            Main.TextDecorations = null;
-            Feedback.TextDecorations = null;
-            Order.TextDecorations = TextDecorations.Underline;
-            Company.TextDecorations = null;
-            History.TextDecorations = null;
+            OrderStatus orderStatus = new OrderStatus();
+            orderStatus.Show();
+            this.Close();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -114,22 +101,7 @@ namespace GooseExpress.Wind
             FeedBackWind feedBackWind = new FeedBackWind();
             feedBackWind.Show();
             this.Close();
-            History.TextDecorations=null;
-            Main.TextDecorations=null;
-            Feedback.TextDecorations = TextDecorations.Underline;
-            Order.TextDecorations=null;
-            Company.TextDecorations=null;
-            History.TextDecorations=null;
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-            History.TextDecorations=null;
-            Main.TextDecorations = TextDecorations.Underline;
-            Feedback.TextDecorations=null;
-            Order.TextDecorations=null;
-            Company.TextDecorations=null;
-            History.TextDecorations=null;
-        }
     }
 }
