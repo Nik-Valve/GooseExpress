@@ -26,11 +26,11 @@ C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\SenderWind
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\SettingWind.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegWhiteWind.g.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\RegWhiteWind.baml
-C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompany.g.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\FeedBackWind.g.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\OrderStatus.g.cs
-C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompany.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\FeedBackWind.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\OrderStatus.baml
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompanyWind.g.cs
 C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutCompanyWind.baml
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutOrderWind.g.cs
+C:\Users\gupalo\source\repos\GooseExpress\GooseExpress\obj\Debug\Wind\AboutOrderWind.baml
