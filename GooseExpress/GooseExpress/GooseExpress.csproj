@@ -59,11 +59,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Wind\AboutCompany.xaml.cs">
-      <DependentUpon>AboutCompany.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Wind\AboutCompanyWind.xaml.cs">
       <DependentUpon>AboutCompanyWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wind\AboutOrderWind.xaml.cs">
+      <DependentUpon>AboutOrderWind.xaml</DependentUpon>
     </Compile>
     <Compile Include="Wind\FeedBackWind.xaml.cs">
       <DependentUpon>FeedBackWind.xaml</DependentUpon>
@@ -120,11 +120,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Wind\AboutCompany.xaml">
+    <Page Include="Wind\AboutCompanyWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Wind\AboutCompanyWind.xaml">
+    <Page Include="Wind\AboutOrderWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
