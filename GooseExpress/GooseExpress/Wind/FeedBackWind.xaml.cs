@@ -1,6 +1,8 @@
-﻿using System;
+﻿using GooseExpress.DataHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,10 +22,61 @@ namespace GooseExpress.Wind
     /// </summary>
     public partial class FeedBackWind : Window
     {
+        List<FeedBacks> b = new List<FeedBacks>();
+
+        public static async Task<List<FeedBacks>> FeedBack()
+        {
+            HttpClient httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri("https://localhost:7061");
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json")
+                );
+            List<FeedBacks> a = new List<FeedBacks>();
+            var response = await httpClient.GetAsync("https://localhost:7061/api/Cargo/FeedBack/All");
+            if (response.IsSuccessStatusCode)
+            {
+                if (response != null)
+                {
+                    a = await response.Content.ReadAsAsync<List<FeedBacks>>();
+                }
+            }
+            return a;
+        }
         public FeedBackWind()
         {
             InitializeComponent();
             Feedback.TextDecorations = TextDecorations.Underline;
+            Labels();
+        }
+        public async void Labels()
+        {
+            b = await FeedBack();
+            //Image1.Source = b[0].Image.ToStrin;
+            LabelTop1.Text = b[0].Comment;
+            LabelBottom1.Content = b[0].Lastname + "." + b[0].FisrtName;
+            
+            LabelTop2.Text = b[1].Comment;
+            LabelBottom2.Content = b[1].Lastname + "." + b[1].FisrtName;
+
+            LabelTop3.Text = b[2].Comment;
+            LabelBottom3.Content = b[2].Lastname + "." + b[2].FisrtName;
+
+            LabelTop4.Text = b[3].Comment;
+            LabelBottom4.Content = b[3].Lastname + "." + b[3].FisrtName;
+
+            LabelTop5.Text = b[4].Comment;
+            LabelBottom5.Content = b[4].Lastname + "." + b[4].FisrtName;
+
+            LabelTop6.Text = b[5].Comment;
+            LabelBottom6.Content = b[5].Lastname + "." + b[5].FisrtName;
+
+            LabelTop7.Text = b[6].Comment;
+            LabelBottom7.Content = b[6].Lastname + "." + b[6].FisrtName;
+
+            LabelTop8.Text = b[7].Comment;
+            LabelBottom8.Content = b[7].Lastname + "." + b[7].FisrtName;
+
         }
 
         Point scrollMousePoint = new Point();
@@ -86,7 +139,9 @@ namespace GooseExpress.Wind
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            HistoryOrderWind historyOrderWind = new HistoryOrderWind();
+            historyOrderWind.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -1,0 +1,8 @@
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'.csproj.AssemblyReference.cache
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'.csproj.SuggestedBindingRedirects.cache
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\MainWindow.g.cs
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\App.g.cs
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'_MarkupCompile.cache
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'_MarkupCompile.lref
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'.exe
+C:\Users\gupalo\source\repos\Solution 'A'\Solution 'A'\obj\Debug\Solution 'A'.pdb

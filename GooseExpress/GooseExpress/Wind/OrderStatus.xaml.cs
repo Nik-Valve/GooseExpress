@@ -1,9 +1,11 @@
-﻿using System;
+﻿using GooseExpress.DataHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Web.WebView2.Core;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -68,6 +70,31 @@ namespace GooseExpress.Wind
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ButtonGo_Click(object sender, RoutedEventArgs e)
+        {
+            OrderStatusRoute route = new OrderStatusRoute();
+            //MessageBox.Show($"ID = {GlobalVariable.id}", "IDDD", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            if (webView != null && webView.CoreWebView2 != null)
+            {
+                switch (GlobalVariable.id)
+                {
+                    case 1:
+                        webView.CoreWebView2.Navigate(route.orderStatus[0]);
+                        break;
+                }
+                //if (customer.Id == 1)
+                //{
+                //webView.So = "";
+
+                //}
+                //else
+                //{
+
+                //}
+            }
         }
     }
 }

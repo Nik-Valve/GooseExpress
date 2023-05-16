@@ -199,28 +199,30 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Image 
+                                x:Name="Image1"
                             Grid.Row="0"
                             Height="84"
                             VerticalAlignment="Top"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop1"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center"
+                                TextWrapping="Wrap"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom1"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -241,22 +243,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop2"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center"
-                                Margin="0,0,0,0"/>
+                                TextWrapping="Wrap"
+                                Margin="10,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom2"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -277,22 +280,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop3"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom3"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -313,22 +317,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop4"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom4"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                 </StackPanel>
@@ -383,22 +388,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop5"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom5"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -419,22 +425,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop6"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom6"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -455,22 +462,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop7"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom7"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                     <Border Grid.Column="0" 
@@ -491,22 +499,23 @@ Margin="10,50,0,170"                            CornerRadius="10"
                             Margin="0,20,0,0"
                             HorizontalAlignment="Center"
                             Source="/Image/employees.png"/>
-                            <Label
+                            <TextBlock
                                 x:Name="LabelTop8"
                                 Grid.Row="1"
                                 Width="170"
-                                Height="100"
+                                Height="80"
                                 VerticalAlignment="Top"
+                                TextWrapping="Wrap"
                                 HorizontalAlignment="Center"
                                 Margin="0,0,0,0"/>
                             <Label
                                 x:Name="LabelBottom8"
                                 Grid.Row="1"
                                 Width="150"
-                                Height="20"
+                                Height="25"
                                 VerticalAlignment="Bottom"
-                                HorizontalAlignment="Center"
-                                Margin="0,0,0,5"/>
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,10"/>
                         </Grid>
                     </Border>
                 </StackPanel>

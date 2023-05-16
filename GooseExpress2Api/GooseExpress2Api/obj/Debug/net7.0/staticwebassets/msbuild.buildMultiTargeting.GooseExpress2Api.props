@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GooseExpress2Api.props" />
+</Project>

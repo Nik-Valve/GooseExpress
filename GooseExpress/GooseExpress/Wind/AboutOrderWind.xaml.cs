@@ -52,7 +52,9 @@ namespace GooseExpress.Wind
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-
+            HistoryOrderWind historyOrderWind = new HistoryOrderWind();
+            historyOrderWind.Title = Title;
+            this.Close();
         }
 
         private void btnreturn_Click(object sender, RoutedEventArgs e)

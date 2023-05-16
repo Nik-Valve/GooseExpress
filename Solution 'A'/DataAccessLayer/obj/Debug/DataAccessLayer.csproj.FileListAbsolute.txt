@@ -1,0 +1,12 @@
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\gupalo\source\repos\Solution 'A'\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
