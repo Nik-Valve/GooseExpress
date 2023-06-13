@@ -8,6 +8,6 @@ namespace GooseExpress.DataHelper
 {
     public static class GlobalVariable
     {
-        public static int id = -1;
+        public static int id { get; set; }
     }
 }

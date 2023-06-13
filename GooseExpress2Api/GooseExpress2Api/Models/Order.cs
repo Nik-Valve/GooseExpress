@@ -14,5 +14,6 @@
         public decimal Cost { get; set;}
         public int IDRate { get; set;}
         public int IDStatus { get; set;}
+        public ICollection<Recipient> Recipients { get; set;}
     }
 }

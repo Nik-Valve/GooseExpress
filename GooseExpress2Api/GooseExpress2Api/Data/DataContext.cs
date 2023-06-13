@@ -11,9 +11,10 @@ namespace GooseExpress2Api.Data
         public DbSet<Cargo> Cargo { get; set; }
         public DbSet<Country> Country { get; set; }
         public DbSet<Customer> Customer { get; set; }
-        public DbSet<FeedBacks> FeedBacks { get; set; }
+        public DbSet<FeedBacks> FeedBack { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Recipient> Recipient { get; set; }
+        public DbSet<City> City { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
                 

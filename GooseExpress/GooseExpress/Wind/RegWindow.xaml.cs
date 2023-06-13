@@ -33,7 +33,6 @@ namespace GooseExpress.Wind
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             a = await EmployeeValidation(tbLogin.Text, tbPassword.Text);
-            GlobalVariable.id = a.Id;
             //MessageBox.Show($"ID = {GlobalVariable.id}", "IDDD", MessageBoxButton.OK,MessageBoxImage.Information);
             //a.Id = 0;
             //a.IdCity = 0;
@@ -54,17 +53,18 @@ namespace GooseExpress.Wind
                 if (a != null)
                 {
                     MainWind mainWind = new MainWind();
+                    GlobalVariable.id = a.Id;
                     mainWind.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Неверный логин и/или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Неверный логин и/или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -82,7 +82,7 @@ namespace GooseExpress.Wind
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json")
                 );
 
-            var response = await httpClient.GetAsync($"https://localhost:7061/api/Cargo/Customer/LoginPassword?username={login}&password={password}");
+            var response = await httpClient.GetAsync($"https://localhost:7061/api/Customer?username={login}&password={password}");
             Customer a = new Customer();
             if (response.IsSuccessStatusCode)
             {

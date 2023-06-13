@@ -11,10 +11,10 @@
         public string FirstName { get; set;}
         public string? Patronymic { get; set;}
         public string Email { get; set;}
-        public string? Seria { get; set;}
-        public string? Number { get; set;}
-        public string? Login { get; set;}
-        public string? Password { get; set;}
-        public string? Image { get; set;}
+        public string Seria { get; set;}
+        public string Number { get; set;}
+        public string Login { get; set;}
+        public string Password { get; set;}
+        public byte[]? Image { get; set;}
     }
 }

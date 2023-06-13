@@ -17,6 +17,7 @@ builder.Services.AddScoped<ICustomerRepositories, CustomerRepositories>();
 builder.Services.AddScoped<IFeedbackRepositories, FeedBackRepositories>();
 builder.Services.AddScoped<IOrderRepositories,OrderRepositories>();
 builder.Services.AddScoped<IRecipientsRepositories,RecipientRepository>();
+builder.Services.AddScoped<ICityRepositories, CityRepositories>();
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext"));

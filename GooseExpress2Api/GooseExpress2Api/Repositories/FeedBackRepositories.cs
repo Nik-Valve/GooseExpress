@@ -13,7 +13,7 @@ namespace GooseExpress2Api.Repositories
         }
         public ICollection<FeedBacks> GetAll()
         {
-            return _dataContext.FeedBacks.OrderBy(i => i.Id).ToList();
+            return _dataContext.FeedBack.OrderBy(i => i.Id).ToList();
         }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc;
 using GooseExpress2Api.Repositories;
+using GooseExpress2Api.Dto;
 
 namespace GooseExpress2Api.Controllers
 {
@@ -22,7 +23,7 @@ namespace GooseExpress2Api.Controllers
         private readonly DataContext _dataContext;
 
         public CargoController(ICargoRepositories cargoRepositories,
-            DataContext context, 
+            DataContext context,
             ICountryRepositories countryRepositories,
             ICustomerRepositories customerRepositories,
             IFeedbackRepositories feedbackRepositories,
@@ -58,43 +59,25 @@ namespace GooseExpress2Api.Controllers
 
             return Ok(pokemons);
         }
-        [HttpGet ("Customer")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Customer>))]
-        public IActionResult GetCustomer()
-        {
-            var customers = _customerRepositories.GetAll();
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            return Ok(customers);
-        }
+        
         private class LoginAndPassword
         {
             string _login;
             string _password;
         }
-        [HttpGet("Customer/LoginPassword")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Customer>))]
-        public IActionResult GetLoginPassword(string username,string password)
-        {
-            var customers = _customerRepositories.GetLoginAndPassword(username,password);
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+        //[HttpGet("Customer/LoginPassword")]
+        //[ProducesResponseType(200, Type = typeof(IEnumerable<Customer>))]
+        //public IActionResult GetLoginPassword(string username, string password)
+        //{
+        //    var customers = _customerRepositories.GetLoginAndPassword(username, password);
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
 
-            return Ok(customers);
-        }
-        [HttpGet("FeedBack/All")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<FeedBacks>))]
-        public IActionResult GetFeedbacks()
-        {
-            var feedbacks = _feedbackRepositories.GetAll();
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            return Ok(feedbacks);
-        }
+        //    return Ok(customers);
+        //}
+        
         [HttpGet("Order/All")]
-        [ProducesResponseType(200, Type = typeof (IEnumerable<Order>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Order>))]
         public IActionResult GetOrders()
         {
             var orders = _orderRepositories.GetOrders();
@@ -105,23 +88,17 @@ namespace GooseExpress2Api.Controllers
         }
         [HttpGet("Recipients/All")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Recipient>))]
-        public IActionResult GetRecipients()
+        public IActionResult GetRecipients(int a)
         {
-            var recipients = _recipientsRepositories.GetRecipients();
+            //var recipients = _recipientsRepositories.GetRecipients();
+            var pageObject = (from or in _dataContext.Order
+                              join ca in _dataContext.Cargo on or.Id equals ca.IDOrder
+                              join re in _dataContext.Recipient on or.IDRecipient equals re.Id
+                              where or.IDCustomer == a
+                              select new { or.Id, ca.NameOfCargo, re.LastName, or.Cost, or.DateOrder, or.DateTerm }).ToList();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
-            return Ok(recipients);
+            return Ok(pageObject);
         }
-        //[HttpGet("HistoryOrder/All")]
-        //[ProducesResponseType(200, Type = typeof(IEnumerable<Order>))]
-        //public IActionResult GetHistory()
-        //{
-        //    var history = _historyOrderRepositories.historyOrders();
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
-
-        //    return Ok(history);
-        //}
     }
 }

@@ -6,7 +6,212 @@
         xmlns:local="clr-namespace:GooseExpress.Wind"
         mc:Ignorable="d"
         Title="HistoryOrderWind" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="HoverUnderlineStyleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock x:Name="TextBlock">
+                        <ContentPresenter Content="{TemplateBinding  Content}" ContentTemplate="{TemplateBinding  ContentTemplate}"/>
+                        </TextBlock>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="TextBlock" Property="TextBlock.TextDecorations" Value="Underline"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="HoverUnderlineStyleButtonNone">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock x:Name="TextBlock">
+                        <ContentPresenter Content="{TemplateBinding  Content}" ContentTemplate="{TemplateBinding  ContentTemplate}"/>
+                        </TextBlock>
+                        <ControlTemplate.Triggers>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        CornerRadius="5" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Image/MainBack.png" 
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button
+            x:Name="btnreturn"
+            HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource MyButtonStyle}"
+            Click="btnreturn_Click_1">
+            <Image Width="30" Height="30"
+                   Source="/Image/2 (1).png"
+               />
+        </Button>
+        <Button
+            x:Name="btnSetting"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="0,0,10,0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Style="{StaticResource MyButtonStyle}"
+            Click="btnSetting_Click">
+            <Image Width="30" Height="30" Source="/Image/free-icon-setting-3288743.png">
+            </Image>
+        </Button>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,0">
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                Width="100"
+                Height="25"
+                FontSize="18"
+                Foreground="White"
+                Click="Button_Click"
+                Margin="30,0,0,0">
+                <Button.Content>
+                    <TextBlock x:Name="Main">
+                        Главная
+                    </TextBlock>
+                </Button.Content>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="100"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_1"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Feedback">
+                        Отзывы
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="150"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_2"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Order">
+                    Состояние заказа
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButton}"
+                FontSize="18"
+                Width="100"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_3"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="Company">
+                    О компании
+                </TextBlock>
+            </Button>
+            <Button
+                Style="{StaticResource HoverUnderlineStyleButtonNone}"
+                FontSize="18"
+                Width="150"
+                Height="25"
+                Foreground="White"
+                Click="Button_Click_4"
+                Margin="30,0,0,0">
+                <TextBlock x:Name="History">
+                    История заказов
+                </TextBlock>
+            </Button>
+        </StackPanel>
+        <DataGrid
+            x:Name="dtGrid"
+            Grid.Row="2"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            Width="650"
+            Height="300"
+            Background="#875C5C5C" 
+            HeadersVisibility="Column"
+            BorderBrush="{x:Null}" Foreground="White">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" 
+                       TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" 
+                            Value="#4F6156" />
+                    <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                </Style>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="#875C5C5C"/>
+                </Style>
+                <Style TargetType="DataGridCell">
+                    <Style.Setters>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                    </Style.Setters>
+                </Style>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FF68A87D"/>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Зак. №"
+                                    Binding="{Binding Path= Id}"
+                                    Width="39" Foreground="White"/>
+                <DataGridTextColumn Header="Отправлено"
+                                         Binding="{Binding Path= NameOfCargo}"
+                                         Width="120" Foreground="White" />
+                <DataGridTextColumn Header="Получатель" 
+                                    Binding="{Binding Path=LastName}"
+                                    Width="110" Foreground="White" />
+                <DataGridTextColumn Header="Сумма" 
+                                    Binding="{Binding Path=Cost}"
+                                    Width="60" Foreground="White" />
+                <DataGridTextColumn Header="Отправка" 
+                                    Binding="{Binding Path=DateOrder}"
+                                    Width="155" Foreground="White" />
+                <DataGridTextColumn Header="Получение" 
+                                    Binding="{Binding Path=DateTerm}"
+                                    Width="155" Foreground="White" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

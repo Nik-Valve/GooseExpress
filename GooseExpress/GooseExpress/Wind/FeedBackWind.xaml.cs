@@ -33,7 +33,7 @@ namespace GooseExpress.Wind
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json")
                 );
             List<FeedBacks> a = new List<FeedBacks>();
-            var response = await httpClient.GetAsync("https://localhost:7061/api/Cargo/FeedBack/All");
+            var response = await httpClient.GetAsync("https://localhost:7061/api/FeedBack/FeedBack/All");
             if (response.IsSuccessStatusCode)
             {
                 if (response != null)
@@ -54,28 +54,28 @@ namespace GooseExpress.Wind
             b = await FeedBack();
             //Image1.Source = b[0].Image.ToStrin;
             LabelTop1.Text = b[0].Comment;
-            LabelBottom1.Content = b[0].Lastname + "." + b[0].FisrtName;
+            LabelBottom1.Content = b[0].Lastname + " " + b[0].FirstName;
             
             LabelTop2.Text = b[1].Comment;
-            LabelBottom2.Content = b[1].Lastname + "." + b[1].FisrtName;
+            LabelBottom2.Content = b[1].Lastname + " " + b[1].FirstName;
 
             LabelTop3.Text = b[2].Comment;
-            LabelBottom3.Content = b[2].Lastname + "." + b[2].FisrtName;
+            LabelBottom3.Content = b[2].Lastname + " " + b[2].FirstName;
 
             LabelTop4.Text = b[3].Comment;
-            LabelBottom4.Content = b[3].Lastname + "." + b[3].FisrtName;
+            LabelBottom4.Content = b[3].Lastname + " " + b[3].FirstName;
 
             LabelTop5.Text = b[4].Comment;
-            LabelBottom5.Content = b[4].Lastname + "." + b[4].FisrtName;
+            LabelBottom5.Content = b[4].Lastname + " " + b[4].FirstName;
 
             LabelTop6.Text = b[5].Comment;
-            LabelBottom6.Content = b[5].Lastname + "." + b[5].FisrtName;
+            LabelBottom6.Content = b[5].Lastname + " " + b[5].FirstName;
 
             LabelTop7.Text = b[6].Comment;
-            LabelBottom7.Content = b[6].Lastname + "." + b[6].FisrtName;
+            LabelBottom7.Content = b[6].Lastname + " " + b[6].FirstName;
 
             LabelTop8.Text = b[7].Comment;
-            LabelBottom8.Content = b[7].Lastname + "." + b[7].FisrtName;
+            LabelBottom8.Content = b[7].Lastname + " " + b[7].FirstName;
 
         }
 
