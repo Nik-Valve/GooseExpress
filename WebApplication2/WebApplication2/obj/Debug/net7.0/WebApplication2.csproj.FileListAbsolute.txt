@@ -1,7 +1,0 @@
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.csproj.AssemblyReference.cache
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.AssemblyInfoInputs.cache
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.AssemblyInfo.cs
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.csproj.CoreCompileInputs.cache
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\gupalo\source\repos\WebApplication2\WebApplication2\obj\Debug\net7.0\WebApplication2.MvcApplicationPartsAssemblyInfo.cache
