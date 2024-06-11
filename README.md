@@ -1,4 +1,4 @@
-![image](https://github.com/Nik-Valve/GooseExpress/assets/98512811/5e0108a3-a59c-40f0-8b20-0c47e6f56e39)![image](https://github.com/Nik-Valve/GooseExpress/assets/98512811/e3a72e73-c702-4434-a38b-e6fe8f3c442f)**1. USE-CASE ДИАГРАММА**
+**1. USE-CASE ДИАГРАММА**
 =
 ![image](https://github.com/Nik-Valve/GooseExpress/assets/98512811/525465b9-8499-4cd0-abeb-a263e81b723d)<br>
 **2. ERD БАЗЫ ДАННЫХ**
